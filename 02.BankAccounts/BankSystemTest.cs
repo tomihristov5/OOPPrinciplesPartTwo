@@ -17,22 +17,22 @@
             newBank.AddAccount(pesho);
             newBank.AddAccount(trisko);
 
-            Console.WriteLine(pesho.AccountOwner.CustomerName + "'s interest for the given period is: "
-                + pesho.CalculateInterestAmountForAPeriod(5));
-            Console.WriteLine(gosho.AccountOwner.CustomerName + "'s interest for the given period is: " 
-                + gosho.CalculateInterestAmountForAPeriod(2));
-            Console.WriteLine(yula.AccountOwner.CustomerName + "'s interest for the given period is: " 
-                + yula.CalculateInterestAmountForAPeriod(8));
-            Console.WriteLine(tosho.AccountOwner.CustomerName + "'s interest for the given period is: "
-                + tosho.CalculateInterestAmountForAPeriod(16));
-            Console.WriteLine(trisko.AccountOwner.CustomerName + "'s interest for the given period is: " 
-                + trisko.CalculateInterestAmountForAPeriod(14));
+            Console.WriteLine("{0}'s interest for the given period is: {1:0.00}",
+                pesho.AccountOwner.CustomerName, trisko.CalculateInterestAmountForAPeriod(5));
+            Console.WriteLine("{0}'s interest for the given period is: {1:0.00}",
+                gosho.AccountOwner.CustomerName, trisko.CalculateInterestAmountForAPeriod(2));
+            Console.WriteLine("{0}'s interest for the given period is: {1:0.00}",
+                yula.AccountOwner.CustomerName, trisko.CalculateInterestAmountForAPeriod(8));
+            Console.WriteLine("{0}'s interest for the given period is: {1:0.00}",
+                tosho.AccountOwner.CustomerName, trisko.CalculateInterestAmountForAPeriod(16));
+            Console.WriteLine("{0}'s interest for the given period is: {1:0.00}", 
+                trisko.AccountOwner.CustomerName, trisko.CalculateInterestAmountForAPeriod(14));
 
             pesho.Withdraw(300);
-            Console.WriteLine(pesho.AccountOwner.CustomerName + "'s balance is: " + pesho.Balance);
+            Console.WriteLine("{0}'s balance is: {1:0.00}", pesho.AccountOwner.CustomerName, pesho.Balance);
 
             gosho.Deposit(4000);
-            Console.WriteLine(gosho.AccountOwner.CustomerName + "'s balance is: " + gosho.Balance);
+            Console.WriteLine("{0}'s balance is: {1:0.00}", gosho.AccountOwner.CustomerName, gosho.Balance);
         }
     }
 }
